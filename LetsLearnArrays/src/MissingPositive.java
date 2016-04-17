@@ -17,7 +17,7 @@ public class MissingPositive {
         for (int i = 0; i < n; i++) {
 
             while (A[i] != i + 1) {
-                // no need to swap when ith elemen is out of the range [0, n]
+                // no need to swap when ith element is out of the range [0, n]
                 if (A[i] <= 0 || A[i] > n)
                     break;
                 // swap elements
