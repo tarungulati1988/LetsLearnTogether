@@ -55,7 +55,7 @@ public class ZigZagTraversal {
 
     }
 
-    public static void main(String[] args) throws java.lang.Exception {
+    public static void main(String[] args) {
         Node root = new Node(5);
         root.left = new Node(10);
         root.right = new Node(15);
