@@ -6,7 +6,7 @@ import java.util.Queue;
  */
 
 /**
- * Objective: Given a binary Tree and two lev­els, Print all the nodes between those.
+ * Objective: Given a binary Tree and two levels, Print all the nodes between those.
  * Input: A Binary Tree and two levels.
  * Output: Print all the nodes between given levels.
  */
@@ -41,9 +41,6 @@ public class PrintNodesBetweenTwoLevels {
 
                 levelNodes--;
 
-            }
-            if (CURRENT_LEVEL >= low && CURRENT_LEVEL <= high) {
-                System.out.println("");
             }
             CURRENT_LEVEL++;
         }
