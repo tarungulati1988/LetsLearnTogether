@@ -24,11 +24,11 @@ public class PrintValidParantheses {
         }
 
         if (left > 0) {
-            System.out.println("left>0: " + str);
+//            System.out.println("left>0: " + str);
             printParantheses(left - 1, right + 1, str + "{");
         }
         if (right > 0) {
-            System.out.println("right>0: " + str);
+//            System.out.println("right>0: " + str);
             printParantheses(left, right - 1, str + "}");
         }
 
