@@ -1,7 +1,7 @@
 # LetsLearnTogether
 
 #### Lets Learn Arrays
-[/LetsLearnArrays/src/FourSum.java](FourSum)
+1. [FourSum](/LetsLearnArrays/src/FourSum.java)
 
 #### Lets Learn Bit Manipulation
 
