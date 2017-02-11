@@ -14,7 +14,7 @@ public class BalancedParantheses {
 //        System.out.println(balancedParenthensies("{(})"));
 //        System.out.println(balancedParenthensies("{)(}"));
 //        System.out.println(balancedParenthensies("{[}]}"));
-        String[] result = Braces(new String[]{"{()}", "{(})", "{)(}", "{[}]}"});
+        String[] result = Braces(new String[]{"{()}", "{(})"});
         for (String str : result)
             System.out.println(str);
     }
@@ -49,7 +49,6 @@ public class BalancedParantheses {
 
     static String[] Braces(String[] values) {
         String[] result = new String[values.length];
-        Stack<Character> stack = new Stack<>();
 
         System.out.println(values.length);
 
@@ -59,44 +58,6 @@ public class BalancedParantheses {
             else
                 result[j] = "NO";
         }
-
-//            for (int i = 0; i < values[i].length(); i++) {
-//                String s = values[i];
-//                char c = s.charAt(i);
-//                if (c == '[' || c == '(' || c == '{') {
-//                    stack.push(c);
-//                } else if (c == ']') {
-//                    if (stack.isEmpty()) {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//                    if (stack.pop() != '[') {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//
-//                } else if (c == ')') {
-//                    if (stack.isEmpty()) {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//                    if (stack.pop() != '(') {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//
-//                } else if (c == '}') {
-//                    if (stack.isEmpty()) {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//                    if (stack.pop() != '{') {
-//                        result[j] = "NO";
-//                        break;
-//                    }
-//                }
-//
-//            }
 
         return result;
 

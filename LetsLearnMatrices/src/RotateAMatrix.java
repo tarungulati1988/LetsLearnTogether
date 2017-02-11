@@ -4,11 +4,12 @@
 public class RotateAMatrix {
 
     public static void main(String[] args) {
-        int[][] matrix = {{1, 2, 3, 4, 5},
-                {2, 3, 4, 5, 6},
-                {3, 4, 5, 6, 7},
-                {5, 6, 7, 8, 9},
-                {11, 12, 13, 14, 15}};
+        int[][] matrix = {{1, 2, 3, 4, 5, 6},
+                {2, 3, 4, 5, 6, 7},
+                {3, 4, 5, 6, 7, 8},
+                {5, 6, 7, 8, 9, 9},
+                {11, 12, 13, 14, 15, 16},
+                {111, 112, 113, 114, 115, 116}};
 
         display(matrix);
 
@@ -29,10 +30,15 @@ public class RotateAMatrix {
         System.out.println("---------");
     }
 
+
+    /**
+     * works on the principle that m[i][j] == m[n - 1 - j][i]
+     * @param matrix
+     */
     public static void rotate(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n / 2; i++) {
-            for (int j = 0; j < Math.ceil(((double) n) / 2); j++) {
+            for (int j = 0; j < n/2; j++) {
                 // temp for top left
                 int temp = matrix[i][j];
                 // top left to top right
