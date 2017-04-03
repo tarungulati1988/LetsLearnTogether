@@ -4,7 +4,7 @@
 public class AddIntegers {
 
     public static void main(String[] args) {
-        System.out.println(integerBreak(1));
+        System.out.println(integerBreak(111));
     }
 
     public static int integerBreak(int n) {

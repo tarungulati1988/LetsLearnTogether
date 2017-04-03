@@ -1,9 +1,3 @@
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.*;
 
 /**
  * Created by tgulati on 5/26/16.
@@ -24,6 +18,7 @@ public class ReverseLinkedListInRange {
 
         //head = reverse(head, 3, 5);
         head = reverse2(head, 3, 5);
+//        head = reverse3(head, 3, 5);
 
 
         display(head);
@@ -55,23 +50,48 @@ public class ReverseLinkedListInRange {
             node = cur;
             cur = nxt;
         }
-//        System.out.println("first2: ");
-//        display(first);
-//
-//        System.out.println("prev:");
-//        display(prev);
-//
-//        System.out.println("curr:");
-//        display(cur);
-//
-//        System.out.println("node:");
-//        display(node);
 
         prev.next = cur;
         System.out.println("prev:");
         display(prev);
 
         first.next = node;
+
+        return dummy.next;
+    }
+
+    private static Node reverse3(Node head, int m, int n) {
+
+        if (head == null || head.next == null || m == n) {
+            return head;
+        }
+        Node dummy = new Node(0);
+        Node first = dummy;
+        dummy.next = head;
+
+        for (int i = 0; i < m-1; i++) {
+            first = first.next;
+        }
+
+        System.out.println("first: ");
+        display(first);
+
+        Node cur = first.next;
+        Node prev = first.next;
+        Node next = null;
+
+        for (int i = 0; i <= n-m; i++) {
+            next = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = next;
+        }
+
+        prev.next = cur;
+        System.out.println("prev:");
+        display(prev);
+
+        first.next = next;
 
         return dummy.next;
     }
